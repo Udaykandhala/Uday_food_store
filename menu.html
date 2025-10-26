@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Haven - Menu</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+<header>
+    <div class="logo">Uday's Collective Cuisine</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="menu">
+<h2>Our Menu</h2>
+<div class="filters">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('fastfood')">Fast Food</button>
+    <button onclick="filterMenu('asian')">Asian</button>
+    <button onclick="filterMenu('dessert')">Dessert</button>
+</div>
+
+<div class="menu-items">
+    <div class="menu-item" data-category="fastfood">
+        <img src="burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>$8.99</p>
+        <button onclick="addToCart('Burger',8.99,this)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-category="fastfood">
+        <img src="pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>$12.99</p>
+        <button onclick="addToCart('Pizza',12.99,this)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-category="asian">
+        <img src="sushi.jpg" alt="Sushi">
+        <h3>Sushi</h3>
+        <p>$15.99</p>
+        <button onclick="addToCart('Sushi',15.99,this)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-category="dessert">
+        <img src="chocolate cake.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>$6.50</p>
+        <button onclick="addToCart('Chocolate Cake',6.50,this)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-category="asian">
+        <img src="ramen.jpg" alt="Ramen">
+        <h3>Ramen</h3>
+        <p>$10.99</p>
+        <button onclick="addToCart('Ramen',10.99,this)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-category="fastfood">
+        <img src="fries.jpg" alt="Fries">
+        <h3>Fries</h3>
+        <p>$4.99</p>
+        <button onclick="addToCart('Fries',4.99,this)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button id="checkout">Checkout</button>
+</div>
+
+<footer>
+    <p>&copy; 2025 Uday's Collective Cuisine. All rights reserved.</p>
+    <p>Contact: info@udaycollectivecuisine.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
